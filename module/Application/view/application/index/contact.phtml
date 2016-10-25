@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/logo.png'))
+                ->prependStylesheet($this->basePath('customer/css/animate.min.css'))
+                ->prependStylesheet($this->basePath('customer/css/font-awesome.min.css'))
+                ->prependStylesheet($this->basePath('customer/css/lightbox.css'))
+                ->prependStylesheet($this->basePath('customer/css/main.css'))
+                ->prependStylesheet($this->basePath('customer/css/presets/preset1.csss'))
+                ->prependStylesheet($this->basePath('customer/css/responsive.css'));
+        ?>
+
+        <!-- Scripts -->
+        <?php
+        echo $this->headScript()
+                ->prependFile($this->basePath('customer/js/jquery.js'))
+                ->prependFile($this->basePath('customer/js/wow.min.js'))
+                ->prependFile($this->basePath('customer/js/mousescroll.js'))
+                ->prependFile($this->basePath('customer/js/smoothscroll.js'))
+                ->prependFile($this->basePath('customer/js/jquery.countTo.js'))
+                ->prependFile($this->basePath('customer/js/jquery.countTo.js'))
+                ->prependFile($this->basePath('customer/js/main.js'));
+        ?>
+    </head><!--/head-->
+
+    <body>
+        <section id="contact">
+            <div id="contact-us" class="parallax">
+                <div class="container">
+                    <div class="row">
+                        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                            <h2>Contactez nous</h2>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <form id="main-contact-form" name="contact-form" method="post" action="#">
+                                    <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" name="name" class="form-control" placeholder="Nom" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <input type="email" name="email" class="form-control" placeholder="Adresse Email" required="required">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="subject" class="form-control" placeholder="Objet" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Entrez votre message" required="required"></textarea>
+                                    </div>                        
+                                    <div class="form-group">
+                                        <button type="submit" name="send" class="btn-submit btn-primary">Envoyer</button>
+                                    </div>
+                                </form>   
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                    <p>2SW est une entreprise dont l'activité principale est centrée sur le génie civil, l'hydraulique, l'assainissement et l'énergie renouvelable.</p>
+                                    <ul class="address">
+                                        <li><i class="glyphicon glyphicon-envelope"></i> <span> Adresse:</span> Maroua Cameroun </li>
+                                        <li><i class="fa fa-phone"></i> <span> Téléphone:</span> 00237 676 094 994  </li>
+                                        <li><i class="fa fa-envelope"></i> <span> Adresse Email:</span><a href="mailto:someone@yoursite.com"> sahel_2sw@yahoo.fr</a></li>
+                                        <li><i class="fa fa-globe"></i> <span> Site:</span> <a href="#">www.2sw.com</a></li>
+                                    </ul>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+        </section>
+    </div>
+    <?php
+    if (isset($_POST['send'])) {
+        $name = @trim(stripslashes($_POST['name']));
+        $from = @trim(stripslashes($_POST['email']));
+        $subject = @trim(stripslashes($_POST['subject']));
+        $message = @trim(stripslashes($_POST['message']));
+        $to = 'amadoubakari1992@gmail.com'; //replace with your email
+
+        $headers = array();
+        $headers[] = "MIME-Version: 1.0";
+        $headers[] = "Content-type: text/plain; charset=iso-8859-1";
+        $headers[] = "From: {$name} <{$from}>";
+        $headers[] = "Reply-To: <{$from}>";
+        $headers[] = "Subject: {$subject}";
+        $headers[] = "X-Mailer: PHP/" . phpversion();
+
+        mail($to, $subject, $message, $headers);
+
+        die;
+    }
+    ?>
+</body>
+</html>

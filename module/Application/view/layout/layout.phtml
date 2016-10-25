@@ -1,0 +1,54 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Sahel Water Sanitation and Environment')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/icone.png'))
+                ->prependStylesheet($this->basePath('style/css/style.css'))
+                ->prependStylesheet($this->basePath('style/css/prettyPhoto.css'))
+                ->prependStylesheet($this->basePath('style/css/hoverex-all.css'))
+                ->prependStylesheet($this->basePath('style/css/font-awesome.min.css'))
+                ->prependStylesheet($this->basePath('style/css/bootstrap.css'))
+        ?>
+
+        <!-- Scripts -->
+        <?php
+        echo $this->headScript()
+                ->prependFile($this->basePath('style/js/bootstrap.min.js'))
+                ->prependFile($this->basePath('style/js/custom.js'))
+                ->prependFile($this->basePath('style/js/jquery.hoverdir.js'))
+                ->prependFile($this->basePath('style/js/jquery.hoverex.min.js'))
+                ->prependFile($this->basePath('style/js/jquery.isotope.min.js'))
+                ->prependFile($this->basePath('style/js/jquery.prettyPhoto.js'))
+                ->prependFile($this->basePath('style/js/retina-1.1.0.js'))
+        ;
+        ?>
+
+    </head>
+    <body class="row">
+        <div class="col-xs-12">
+            <?php echo $this->render('header.phtml'); ?>
+        </div>
+        <div class="col-xs-12">
+            <?php echo $this->render('slider.phtml'); ?>
+        </div>
+        <div class="col-xs-12">
+            <?php echo $this->content ?>
+            <hr>
+        </div>
+        <div class="col-xs-12">              
+            <?php echo $this->render('footer.phtml'); ?>
+        </div>
+        <?php $this->inlineScript() ?>
+    </body>
+</html>

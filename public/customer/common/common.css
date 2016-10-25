@@ -1,0 +1,188 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 3 sept. 2016, 12:26:37
+    Author     : AMADOU BAKARI
+*/
+.p-service{
+    color: black;
+    opacity: 0.7;
+    font-size: 20px;
+    //font-weight: bold;
+    font-family: 'Buda', cursive;
+}
+
+.cv-title{
+    color: blue;
+    text-align: center;
+    font-family: 'Scheherazade', serif;
+    font-size: 30px;
+    border-bottom: 4px #F4F4F4 solid;
+    text-transform: uppercase
+}
+.cv-footer{
+    color: blue;
+    text-align: left;
+    font-family: 'Scheherazade', serif;
+    font-size: 26px;
+    border-top: 4px #F4F4F4 solid;
+    text-transform: uppercase
+}
+.menu-element{
+    /*    color: black;
+        opacity: 0.8;*/
+    text-align: left;
+    font-family: 'Quintessential', cursive;
+    font-size: 18px;
+    //font-weight: bold
+}
+.footer-menu-element{
+    color: black;
+    text-align: left;
+    font-family: 'Poiret One', cursive;
+    font-size: 22px;
+    font-weight: bold;
+    opacity: 0.7;   
+}
+
+//les messages de réception 
+.header{
+    color: black;
+    /*    opacity: 0.6;*/
+    text-align: left;
+    font-family: 'Quintessential', cursive;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.notification-title{
+    color: #79B7E8;
+    /*    font-family: 'Quintessential', cursive;*/
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.notification-footer{
+    color: #79B7E8;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.notification-see-all{
+    color: #79B7E8;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.notification-image{
+    vertical-align: central;
+    margin-top: 30px;
+    /*    border: solid 1px black */
+}
+.notification-content{
+    color: background;
+    opacity: 0.8;
+    font-size: 16px
+}
+
+//badge
+.notification-badge {
+    padding: 1px 9px 2px;
+    font-size: 12.025px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #ffffff;
+    background-color: #999999;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.badge:hover {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+//team
+.cv-label{
+    font-size: 16px;
+    font-weight: bold;
+    color: indigo;
+    opacity: 0.9;
+}
+.cv-value{
+    font-size: 16px;
+    color: black;
+    opacity: 0.5;
+}
+
+.service-item{
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    color: #79B7E8;
+    font-size: 26px;
+}
+
+.team-item{
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    color: #79B7E8;
+    font-size: 26px;
+}
+
+.img-feature-1 {
+    -webkit-box-shadow: -1px -1px 58px -13px rgba(0,0,0,.9);
+    -moz-box-shadow: -1px -1px 58px -13px rgba(0,0,0,.9);
+    -ms-box-shadow: -1px -1px 58px -13px rgba(0,0,0,.9);
+    -o-box-shadow: -1px -1px 58px -13px rgba(0,0,0,.9);
+    box-shadow: -1px -1px 58px -13px rgba(0,0,0,.9);
+}
+
+.realization-item{
+    background-color: transparent;
+    padding-left: 100px; 
+    padding-top: 100px;
+    text-align: center;
+}
+
+.element-item{
+    color: black;
+    opacity: 0.8;
+    /*    font-family: 'Quintessential', cursive;*/
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 36px;
+}
+.element-sub-item{
+    color: black;
+    opacity: 0.9;
+    /*    font-family: 'Quintessential', cursive;*/
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.team-item-title{
+    color: #79B7E8;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.service-item-label{
+    color: black;
+    opacity: 0.7;
+    font-size: 20px;
+    //font-weight: bold;
+    font-family: 'Buda', cursive;
+}
